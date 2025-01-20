@@ -1,0 +1,149 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+}
+
+.element {
+  font-family: system-ui;
+  padding: 1%;
+  border: thin solid rgba(103, 103, 103, 0.861);
+  border-radius: 1px;
+  box-shadow: 0 0 30px -5px rgba(103, 103, 103, 0.861);
+  background-image: url("img/fon3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-clip: padding-box;
+  max-width: 1200px;
+  width: 90%;
+}
+
+.element::before {
+  content: url("img/g2.png");
+  position: absolute;
+  filter: brightness(2);
+  transition: opacity 0.5s ease;
+}
+
+.element:hover::before {
+  opacity: 0;
+}
+
+.part1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 2fr;
+  grid-template-rows: auto;
+  gap: 10px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.article::first-letter {
+  font-style: italic;
+  display: inline-block;
+  font-size: 25px;
+}
+
+.article {
+  background-color: rgb(226, 226, 226, 0.1);
+  padding: 15px;
+  border-radius: 1px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.article1 {
+  background-color: rgb(226, 226, 226, 0.1);
+  padding: 15px;
+  border-radius: 1px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.article1 img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 0;
+}
+
+.article1 a {
+  color: rgb(43, 43, 43);
+}
+
+.article1 h3 {
+  text-align: center;
+}
+
+.article1::first-letter {
+  font-style: italic;
+  display: inline-block;
+  font-size: 25px;
+}
+
+.article12 {
+  grid-column: span 2;
+  padding: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.article12 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.article12::first-letter {
+  font-style: italic;
+  display: inline-block;
+  font-size: 25px;
+}
+
+.article2 {
+  grid-column: span 2;
+  background-color: rgb(226, 226, 226, 0.1);
+  padding: 15px;
+  border-radius: 1px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.article2::first-letter {
+  font-style: italic;
+  display: inline-block;
+  font-size: 25px;
+}
+
+.article3 {
+  grid-row: span 2;
+  background-color: rgb(226, 226, 226, 0.1);
+  padding-top: 60%;
+  text-align: center;
+  border-radius: 1px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.page-footer {
+  grid-column: span 3;
+  padding: 10px;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .part1 {
+    display: block;
+    font-size: 0.8em;
+  }
+
+  .article1::first-letter,
+  .article12::first-letter,
+  .article2::first-letter {
+    font-size: 1.2em;
+  }
+
+  .article3,
+  .article12 {
+    display: none;
+  }
+
+  img {
+    width: 100%;
+  }
+}
